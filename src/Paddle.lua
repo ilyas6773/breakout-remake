@@ -17,7 +17,7 @@ Paddle = Class{}
 
 --[[
     Our Paddle will initialize at the same spot every time, in the middle
-    of the world horizontally, toward the bottom
+    of the world horizontally, toward the bottom.
 ]]
 function Paddle:init()
     -- x is placed in the middle
@@ -26,7 +26,7 @@ function Paddle:init()
     -- y is placed a little above the bottom edge of the screen
     self.y = VIRTUAL_HEIGHT - 32
 
-    -- start us of with no velocity
+    -- start us off with no velocity
     self.dx = 0
 
     -- starting dimensions
@@ -58,13 +58,12 @@ function Paddle:update(dt)
     -- previously-defined paddle speed scaled by dt
     if self.dx < 0 then
         self.x = math.max(0, self.x + self.dx * dt)
-
     -- similar to before, this time we use math.min to ensure we don't
     -- go any farther than the bottom of the screen minus the paddle's 
-    -- height (or else it will go partially below, since the position is
+    -- height (or else it will go partially below, since position is
     -- based on its top left corner)
     else
-        self.x = math.min(VIRTUAL_WIDTH - self.width, self.x + self.dx *dt)
+        self.x = math.min(VIRTUAL_WIDTH - self.width, self.x + self.dx * dt)
     end
 end
 
