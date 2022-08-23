@@ -5,18 +5,24 @@
 -- https://github.com/Ulydev/push
 push = require 'lib/push'
 
--- the "Class" library we're using will alow us to represent anything in 
+-- the "Class" library we're using will allow us to represent anything in
 -- our game as code, rather than keeping track of many disparate variables and
 -- methods
--- 
+--
 -- https://github.com/vrld/hump/blob/master/class.lua
 Class = require 'lib/class'
 
--- a few global constants, centrelized
+-- a few global constants, centralized
 require 'src/constants'
 
--- the ball that trabels around, breaking bricks and triggering lives lost
+-- the ball that travels around, breaking bricks and triggering lives lost
 require 'src/Ball'
+
+-- the entities in our game map that give us points when we collide with them
+require 'src/Brick'
+
+-- a class used to generate our brick layouts (levels)
+require 'src/LevelMaker'
 
 -- the rectangular entity the player controls, which deflects the ball
 require 'src/Paddle'

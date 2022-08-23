@@ -13,12 +13,12 @@
 ]]
 
 -- the "__includes" bit here means we're going to inherit all of the methods
--- BaseState has, so it will have empty versions of all StateMachine methods
--- even if we don't override them ourselves; handy to avoid supefluous code!
+-- that BaseState has, so it will have empty versions of all StateMachine methods
+-- even if we don't override them ourselves; handy to avoid superfluous code!
 StartState = Class{__includes = BaseState}
 
--- whether we're highlighting "Start" or "HighScores"
-local highlighted = 1 
+-- whether we're highlighting "Start" or "High Scores"
+local highlighted = 1
 
 function StartState:update(dt)
     -- toggle highlighted option if we press an arrow key up or down

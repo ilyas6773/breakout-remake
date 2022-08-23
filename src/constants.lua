@@ -3,7 +3,7 @@
     Breakout Remake
 
     -- constants --
-    
+
     Author: Ilias Tolegenov
     mister.tolegenov@gmail.com
 
