@@ -64,7 +64,7 @@ end
 function Ball:update(dt)
     self.x = self.x + self.dx * dt
     self.y = self.y + self.dy * dt
-    
+
     -- allow ball to bounce off walls
     if self.x <= 0 then
         self.x = 0
